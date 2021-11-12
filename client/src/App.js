@@ -4,13 +4,15 @@ import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 import polaroid from './images/polaroid.png';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
+import useStyles from './styles';
 
 const App = () => {
+    const classes = useStyles();
     return (
         <Container maxwidth="lg">
-            <AppBar position="static" color="inherit">
+            <AppBar className={classes.appBar} position="static" color="inherit">
                 <Typography variant="h2" align="center">MemoryBoard</Typography>
-                <img src={polaroid} alt="memories" width="100" height="100" />
+                <img className={classes.image} src={polaroid} alt="memories" width="100" height="100" />
             </AppBar>
             <Grow in>
                 <Container>
